@@ -26,16 +26,8 @@ function App() {
   return (
     <div class="title">Kalvium Gallery
       <div>
-        {
-          imageData.map(image=>{
-            return(
-              <div key={image.id} className="column">
-                <img src={image.img} height="400px" width="600px"></img>
-              </div>
-            )
-          })
-        }
-      </div>
+        <Gallery imageData={imageData}/>
+      </div>  
     </div>  
   )
 }

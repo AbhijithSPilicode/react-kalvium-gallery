@@ -1,4 +1,19 @@
 .title{
-  align-items: center;
+  text-align: center;
 }
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-gap: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+  width:100%;
+  cursor:pointer;
+
+}
