@@ -5,29 +5,39 @@ import Gallery from './Components/Gallery';
 
 const imageData = [
   {
-    id: 1,
-    url: elephant
+    id:1,
+    img:elephant
   },
   {
-    id: 2,
-    url: elephant,
+    id:2,
+    img:elephant
   },
   {
-    id: 3,
-    url: elephant,
+    id:3,
+    img:elephant
   },
   {
-    id: 4,
-    url: elephant,
+    id:4,
+    img:elephant
   }
-];
+]
 
-function App(){
+function App() {
   return (
-    <div>
-      <h1>My Gallery</h1>
-      <Gallery images={imageData} />
-    </div>
-  );
-};
+    <div class="title">Kalvium Gallery
+      <div>
+        {
+          imageData.map(image=>{
+            return(
+              <div key={image.id} className="column">
+                <img src={image.img} height="400px" width="600px"></img>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>  
+  )
+}
+
 export default App;
